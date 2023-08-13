@@ -1,0 +1,296 @@
+alter table tbl_account
+    add index(`Acc_SlNo`),
+    add index(`branch_id`),
+    add index(`status`);
+
+alter table tbl_assets
+    add index(`as_id`),
+    add index(`as_date`),
+    add index(`status`),
+    add index(`branchid`);
+
+alter table tbl_bank_accounts
+    add index(`account_id`),
+    add index(`branch_id`),
+    add index(`status`);
+
+alter table tbl_bank_transactions
+    add index(`transaction_id`),
+    add index(`account_id`),
+    add index(`transaction_date`),
+    add index(`transaction_type`),
+    add index(`branch_id`),
+    add index(`status`);
+
+alter table tbl_brand 
+    add index(`brand_SiNo`),
+    add index(`ProductCategory_SlNo`),
+    add index(`status`),
+    add index(`brand_branchid`);
+
+alter table tbl_brunch
+    add index(`brunch_id`),
+    add index(`status`);
+
+alter table tbl_cashregister
+    add index(`Transaction_ID`),
+    add index(`Transaction_Date`),
+    add index(`Status`);
+
+alter table tbl_cashtransaction
+    add index(`Tr_SlNo`),
+    add index(`Tr_Id`),
+    add index(`Tr_date`),
+    add index(`Tr_Type`),
+    add index(`Acc_SlID`),
+    add index(`status`),
+    add index(`Tr_branchid`);
+
+alter table tbl_checks 
+    add index(`id`),
+    add index(`cus_id`),
+    add index(`SM_id`),
+    add index(`date`),
+    add index(`remid_date`),
+    add index(`check_status`),
+    add index(`status`),
+    add index(`branch_id`);
+    
+alter table tbl_color 
+    add index(`color_SiNo`),
+    add index(`status`);
+
+alter table tbl_company 
+    add index(`Company_SlNo`),
+    add index(`Invoice_Type`),
+    add index(`print_type`),
+    add index(`company_BrunchId`);
+
+alter table tbl_country 
+    add index(`Country_SlNo`),
+    add index(`Status`);
+
+alter table tbl_currentinventory 
+    add index(`inventory_id`),
+    add index(`product_id`),
+    add index(`cat_id`),
+    add index(`transfer_from_quantity`),
+    add index(`transfer_to_quantity`),
+    add index(`branch_id`);
+
+alter table tbl_customer 
+    add index(`Customer_SlNo`),
+    add index(`Customer_Code`),
+    add index(`Customer_Mobile`),
+    add index(`Customer_Type`),
+    add index(`Country_SlNo`),
+    add index(`area_ID`),
+    add index(`status`),
+    add index(`Customer_brunchid`);
+
+alter table tbl_customer_payment 
+    add index(`CPayment_id`),
+    add index(`CPayment_date`),
+    add index(`CPayment_invoice`),
+    add index(`CPayment_customerID`),
+    add index(`CPayment_TransactionType`),
+    add index(`account_id`),
+    add index(`CPayment_brunchid`),
+    add index(`CPayment_status`);
+
+alter table tbl_damage
+    add index(`Damage_SlNo`),
+    add index(`Damage_InvoiceNo`),
+    add index(`Damage_Date`),
+    add index(`status`),
+    add index(`Damage_brunchid`);
+
+alter table tbl_damagedetails
+    add index(`DamageDetails_SlNo`),
+    add index(`Damage_SlNo`),
+    add index(`Product_SlNo`),
+    add index(`cat_id`),
+    add index(`status`);
+
+alter table tbl_department
+    add index(`Department_SlNo`),
+    add index(`status`);
+
+alter table tbl_designation
+    add index(`Designation_SlNo`),
+    add index(`status`);
+
+alter table tbl_district
+    add index(`District_SlNo`),
+    add index(`status`);
+
+alter table tbl_employee
+    add index(`Employee_SlNo`),
+    add index(`Designation_ID`),
+    add index(`Department_ID`),
+    add index(`Employee_ID`),
+    add index(`status`),
+    add index(`Employee_brinchid`);
+
+alter table tbl_employee_payment
+    add index(`employee_payment_id`),
+    add index(`Employee_SlNo`),
+    add index(`payment_date`),
+    add index(`month_id`),
+    add index(`status`),
+    add index(`paymentBranch_id`);
+
+alter table tbl_expense_head
+    add index(`id`),
+    add index(`status`);
+
+alter table tbl_month
+    add index(`month_id`);
+
+alter table tbl_product
+    add index(`Product_SlNo`),
+    add index(`Product_Code`),
+    add index(`ProductCategory_ID`),
+    add index(`is_service`),
+    add index(`Unit_ID`),
+    add index(`status`),
+    add index(`Product_branchid`);
+
+alter table tbl_productcategory
+    add index(`ProductCategory_SlNo`),
+    add index(`status`),
+    add index(`category_branchid`);
+
+alter table tbl_purchasedetails
+    add index(`PurchaseDetails_SlNo`),
+    add index(`PurchaseMaster_IDNo`),
+    add index(`Product_IDNo`),
+    add index(`cat_id`),
+    add index(`Status`),
+    add index(`PurchaseDetails_branchID`);
+
+alter table tbl_purchasemaster
+    add index(`PurchaseMaster_SlNo`),
+    add index(`Supplier_SlNo`),
+    add index(`Employee_SlNo`),
+    add index(`PurchaseMaster_InvoiceNo`),
+    add index(`PurchaseMaster_OrderDate`),
+    add index(`status`),
+    add index(`PurchaseMaster_BranchID`);
+
+alter table tbl_purchasereturn
+    add index(`PurchaseReturn_SlNo`),
+    add index(`PurchaseMaster_InvoiceNo`),
+    add index(`Supplier_IDdNo`),
+    add index(`PurchaseReturn_ReturnDate`),
+    add index(`Status`),
+    add index(`PurchaseReturn_brunchID`);
+
+alter table tbl_purchasereturndetails
+    add index(`PurchaseReturnDetails_SlNo`),
+    add index(`PurchaseReturn_SlNo`),
+    add index(`PurchaseReturnDetailsProduct_SlNo`),
+    add index(`Status`),
+    add index(`PurchaseReturnDetails_brachid`);
+
+alter table tbl_quotaion_customer
+    add index(`quotation_customer_id`),
+    add index(`quation_customer_branchid`);
+
+alter table tbl_quotation_details
+    add index(`SaleDetails_SlNo`),
+    add index(`SaleMaster_IDNo`),
+    add index(`Product_IDNo`),
+    add index(`Status`),
+    add index(`SaleDetails_BranchId`);
+
+alter table tbl_quotation_master
+    add index(`SaleMaster_SlNo`),
+    add index(`SaleMaster_InvoiceNo`),
+    add index(`SaleMaster_SaleDate`),
+    add index(`Status`),
+    add index(`SaleMaster_branchid`);
+
+alter table tbl_saledetails
+    add index(`SaleDetails_SlNo`),
+    add index(`SaleMaster_IDNo`),
+    add index(`Product_IDNo`),
+    add index(`cat_id`),
+    add index(`Status`),
+    add index(`SaleDetails_BranchId`);
+
+alter table tbl_salereturn
+    add index(`SaleReturn_SlNo`),
+    add index(`SaleMaster_InvoiceNo`),
+    add index(`SaleReturn_ReturnDate`),
+    add index(`Status`),
+    add index(`SaleReturn_brunchId`);
+
+alter table tbl_salereturndetails
+    add index(`SaleReturnDetails_SlNo`),
+    add index(`SaleReturn_IdNo`),
+    add index(`SaleReturnDetailsProduct_SlNo`),
+    add index(`cat_id`),
+    add index(`Status`),
+    add index(`SaleReturnDetails_brunchID`);
+
+alter table tbl_salesmaster
+    add index(`SaleMaster_SlNo`),
+    add index(`SaleMaster_InvoiceNo`),
+    add index(`SalseCustomer_IDNo`),
+    add index(`employee_id`),
+    add index(`SaleMaster_SaleDate`),
+    add index(`Status`),
+    add index(`is_service`),
+    add index(`SaleMaster_branchid`);
+
+alter table tbl_sms
+    add index(`row_id`);
+
+alter table tbl_supplier
+    add index(`Supplier_SlNo`),
+    add index(`Supplier_Code`),
+    add index(`Supplier_Mobile`),
+    add index(`District_SlNo`),
+    add index(`Country_SlNo`),
+    add index(`Status`),
+    add index(`Supplier_brinchid`);
+
+alter table tbl_supplier_payment
+    add index(`SPayment_id`),
+    add index(`SPayment_date`),
+    add index(`SPayment_invoice`),
+    add index(`SPayment_customerID`),
+    add index(`SPayment_TransactionType`),
+    add index(`account_id`),
+    add index(`SPayment_brunchid`),
+    add index(`SPayment_status`);
+
+alter table tbl_transferdetails
+    add index(`transferdetails_id`),
+    add index(`transfer_id`),
+    add index(`cat_id`),
+    add index(`product_id`);
+
+alter table tbl_transfermaster
+    add index(`transfer_id`),
+    add index(`transfer_date`),
+    add index(`transfer_from`),
+    add index(`transfer_to`);
+
+alter table tbl_unit
+    add index(`Unit_SlNo`),
+    add index(`status`);
+
+alter table tbl_user
+    add index(`User_SlNo`),
+    add index(`User_ID`),
+    add index(`User_Name`),
+    add index(`User_Password`),
+    add index(`UserType`),
+    add index(`status`),
+    add index(`Brunch_ID`);
+
+alter table tbl_user_access
+    add index(`access_id`),
+    add index(`user_id`);
